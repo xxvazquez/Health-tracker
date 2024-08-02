@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Intake</title>
+</head>
+<body>
+    <header>
+        <h1>Health Tracker</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('add_intake') }}">Add Intake</a>
+            <a href="{{ url_for('report') }}">Report</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Add Food Intake</h2>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.food.label }} {{ form.food }}
+            </div>
+            <div>
+                {{ form.quantity.label }} {{ form.quantity }}
+            </div>
+            <div>
+                {{ form.submit }}
+            </div>
+        </form>
+    </main>
+</body>
+</html>

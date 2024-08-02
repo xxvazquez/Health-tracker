@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Health Tracker</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('add_intake') }}">Add Intake</a>
+            <a href="{{ url_for('report') }}">Report</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to Health Tracker!</h2>
+        <p>Track your daily food intake.</p>
+    </main>
+</body>
+</html>
