@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Intake</title>
+    <style>
+        /* Add your category color styles here */
+    </style>
 </head>
 <body>
     <header>
@@ -17,15 +20,30 @@
     <main>
         <h2>Add Food Intake</h2>
         <form method="POST">
-            {{ form.hidden_tag() }}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Food Item</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for food in foods %}
+                    <tr class="{{ food.category }}">
+                        <td><input type="checkbox" name="food" value="{{ food.id }}"></td>
+                        <td>{{ food.name }}</td>
+                        <td>{{ food.category }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
             <div>
-                {{ form.food.label }} {{ form.food }}
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity" id="quantity" required>
             </div>
             <div>
-                {{ form.quantity.label }} {{ form.quantity }}
-            </div>
-            <div>
-                {{ form.submit }}
+                <button type="submit">Submit</button>
             </div>
         </form>
     </main>

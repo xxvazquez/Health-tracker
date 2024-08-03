@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3f3; /* Light pastel background */
+}
+header {
+    background: #ff6f61; /* Pastel pink */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+main {
+    padding: 20px;
+}
+h2 {
+    color: #ff6f61; /* Pastel pink */
+}
+.intake-summary {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ffffff; /* White background for contrast */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.intake-summary h3 {
+    color: #ff6f61; /* Pastel pink */
+}
+li {
+    margin: 5px 0; /* Spacing between list items */
+}
